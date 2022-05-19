@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useEffect } from 'react'
 import { themeChange } from 'theme-change'
 import './Navbar.css'
@@ -17,7 +17,7 @@ const Navbar = ({ children }) => {
 
                 <div class="w-full navbar fixed top-0 z-50 bg-base-100">
                     <div className='container mx-auto'>
-                        <div class="flex-1 px-2 mx-2 text-2xl">Clean co.</div>
+                        <div class="flex-1 px-2 mx-2 text-2xl"><Link to='/'>Clean Co.</Link></div>
                         <div class="flex-none lg:hidden">
                             <label for="my-drawer-3" class="btn btn-square btn-ghost">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -27,11 +27,11 @@ const Navbar = ({ children }) => {
                         <div class="flex-none hidden lg:block">
                             <ul class="menu menu-horizontal gap-x-3">
 
-                                <li><NavLink to='/' className='rounded-lg'>Home</NavLink></li>
-                                <li><NavLink to='/about' className='rounded-lg'>About</NavLink></li>
-                                <li><NavLink to='/services' className='rounded-lg'>Services</NavLink></li>
-                                <li><NavLink to='/contact' className='rounded-lg'>Contact</NavLink></li>
-                                <li><NavLink to='/login' className='rounded-lg'>Login</NavLink></li>
+                                <li><NavLink to='/' className='rounded-lg font-bold'>Home</NavLink></li>
+                                <li><NavLink to='/about' className='rounded-lg font-bold'>About</NavLink></li>
+                                <li><NavLink to='/services' className='rounded-lg font-bold'>Services</NavLink></li>
+                                <li><NavLink to='/contact' className='rounded-lg font-bold'>Contact</NavLink></li>
+                                <li><NavLink to='/login' className='rounded-lg font-bold'>Login</NavLink></li>
 
                                 <li class="dropdown dropdown-hover dropdown-end">
                                     <label tabindex="0" class="btn m-1 rounded-lg">Book Now</label>
@@ -44,7 +44,7 @@ const Navbar = ({ children }) => {
                                 </li>
 
                                 <li class="dropdown dropdown-hover dropdown-end">
-                                    <label tabindex="0" class="btn m-1 rounded-lg">Theme</label>
+                                    <label tabindex="0" class="btn m-1 rounded-lg" font-bold>Theme</label>
                                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 ">
                                         <li>  <button data-set-theme="light" data-act-class="ACTIVECLASS">Light</button></li>
 
@@ -76,11 +76,11 @@ const Navbar = ({ children }) => {
                 <label for="my-drawer-3" class="drawer-overlay"></label>
                 <ul class="menu p-4 overflow-y-auto w-80 bg-base-100">
 
-                    <li><NavLink to='/' className='rounded-lg'>Home</NavLink></li>
-                    <li><NavLink to='/about' className='rounded-lg'>About</NavLink></li>
-                    <li><NavLink to='/services' className='rounded-lg'>Services</NavLink></li>
-                    <li><NavLink to='/contact' className='rounded-lg'>Contact</NavLink></li>
-                    <li><NavLink to='/login' className='rounded-lg'>Login</NavLink></li>
+                    <li><NavLink to='/' className='rounded-lg font-bold'>Home</NavLink></li>
+                    <li><NavLink to='/about' className='rounded-lg font-bold'>About</NavLink></li>
+                    <li><NavLink to='/services' className='rounded-lg font-bold'>Services</NavLink></li>
+                    <li><NavLink to='/contact' className='rounded-lg font-bold'>Contact</NavLink></li>
+                    <li><NavLink to='/login' className='rounded-lg font-bold'>Login</NavLink></li>
 
 
 
